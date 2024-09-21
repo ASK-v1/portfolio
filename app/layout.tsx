@@ -36,11 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${thunderSans.className} antialiased bg-neutral-100 text-neutral-800`}
-      >
-        {children}
-      </body>
+      <body className={thunderSans.className}>{children}</body>
     </html>
   );
 }

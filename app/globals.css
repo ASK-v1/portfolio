@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rays {
+  background-image: repeating-linear-gradient(
+      25deg,
+      #fff 0%,
+      #fff 7%,
+      transparent 10%,
+      transparent 12%,
+      #fff 16%
+    ),
+    repeating-linear-gradient(25deg, #262626 100%, #262626 100%);
+  background-size: 150%;
+  filter: blur(10px) invert(100%);
+}

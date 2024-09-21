@@ -74,10 +74,7 @@ export default function Stack() {
         }
       });
 
-      containerRef.current.style.setProperty(
-        "--animation-direction",
-        "reverse"
-      );
+      containerRef.current.style.setProperty("--animation-direction", "normal");
       containerRef.current.style.setProperty("--animation-duration", "100s");
     }
   }
@@ -112,7 +109,7 @@ export default function Stack() {
         ref={containerRef}
         className="scroller flex flex-col gap-8 text-neutral-800 relative w-full max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
       >
-        <span className="border-b border-neutral-200 w-full" />
+        <span className="border-b border-neutral-300 w-full" />
 
         <ul
           ref={scrollerRef}
@@ -130,7 +127,7 @@ export default function Stack() {
           ))}
         </ul>
 
-        <span className="border-b border-neutral-200 w-full" />
+        <span className="border-b border-neutral-300 w-full" />
       </motion.div>
     </div>
   );

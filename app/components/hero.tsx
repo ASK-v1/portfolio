@@ -12,7 +12,7 @@ export default function Hero() {
           duration: 0.5,
           ease: [0.42, 0, 0.58, 1],
         }}
-        className="flex flex-row gap-2 items-center tracking-wide bg-neutral-50 border border-neutral-200 text-neutral-500 px-2.5 font-light text-base text-center rounded-full"
+        className="flex flex-row gap-2 items-center tracking-wide font-light shadow-sm bg-white border-neutral-300 border text-neutral-800 px-2.5 text-base text-center rounded-full"
       >
         <span className="flex w-2.5 h-2.5 bg-teal-500 rounded-full" />
         <span>Available for work</span>
@@ -27,7 +27,7 @@ export default function Hero() {
             duration: 0.5,
             ease: [0.42, 0, 0.58, 1],
           }}
-          className="text-7xl leading-none max-w-2xl sm:text-8xl text-center font-medium flex flex-col items-center"
+          className="text-7xl leading-none max-w-2xl sm:text-8xl text-neutral-800 text-center font-medium flex flex-col items-center"
         >
           Hey There, I am Ahmet, a Front End Developer.
         </motion.h1>
@@ -44,10 +44,10 @@ export default function Hero() {
         >
           <p className="max-w-xl w-full text-center font-light tracking-wide text-xl sm:text-2xl text-neutral-500">
             Experienced Front End Developer with a focus on{" "}
-            <span className="relative font-medium text-teal-500 inline-block stroke-current">
+            <span className="relative inline-block stroke-current">
               React
               <svg
-                className="absolute -bottom-0.5 w-full max-h-1.5"
+                className="absolute text-teal-500 -bottom-0.5 w-full max-h-1.5"
                 viewBox="0 0 55 5"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
@@ -71,10 +71,10 @@ export default function Hero() {
               </svg>
             </span>{" "}
             and{" "}
-            <span className="relative font-medium text-teal-500 inline-block stroke-current">
+            <span className="relative inline-block stroke-current">
               JavaScript
               <svg
-                className="absolute -bottom-0.5 w-full max-h-1.5"
+                className="absolute text-teal-500 -bottom-0.5 w-full max-h-1.5"
                 viewBox="0 0 55 5"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
