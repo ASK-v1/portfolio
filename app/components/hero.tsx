@@ -12,7 +12,7 @@ export default function Hero() {
           duration: 0.5,
           ease: [0.42, 0, 0.58, 1],
         }}
-        className="flex flex-row gap-2 items-center shadow-sm tracking-wide shadow-teal-500/25 bg-teal-100 text-teal-500 px-2.5 font-light text-base text-center rounded-full"
+        className="flex flex-row gap-2 items-center tracking-wide bg-neutral-50 border border-neutral-200 text-neutral-500 px-2.5 font-light text-base text-center rounded-full"
       >
         <span className="flex w-2.5 h-2.5 bg-teal-500 rounded-full" />
         <span>Available for work</span>

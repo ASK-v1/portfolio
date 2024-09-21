@@ -5,17 +5,17 @@ import "./globals.css";
 const thunderSans = localFont({
   src: [
     {
-      path: "./fonts/thunder-light.woff2",
+      path: "../public/fonts/thunder-light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/thunder.woff2",
+      path: "../public/fonts/thunder.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/thunder-medium.woff2",
+      path: "../public/fonts/thunder-medium.woff2",
       weight: "500",
       style: "normal",
     },
