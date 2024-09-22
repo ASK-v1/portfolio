@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -60,6 +60,9 @@ const tech = [
 ];
 
 export default function Stack() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
 
@@ -84,14 +87,17 @@ export default function Stack() {
   }, []);
 
   return (
-    <div className="flex gap-8 items-start justify-center w-full max-w-7xl flex-col">
+    <div
+      ref={ref}
+      className="flex gap-8 items-start justify-center w-full max-w-7xl flex-col"
+    >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{
-          delay: 0.25,
+          delay: 0.1,
           duration: 0.5,
-          ease: [0.42, 0, 0.58, 1],
+          ease: "easeInOut",
         }}
         className="text-neutral-800 font-medium text-3xl sm:text-4xl"
       >
@@ -100,16 +106,16 @@ export default function Stack() {
 
       <motion.div
         initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{
-          delay: 0.5,
+          delay: 0.2,
           duration: 0.5,
-          ease: [0.42, 0, 0.58, 1],
+          ease: "easeInOut",
         }}
         ref={containerRef}
         className="scroller flex flex-col gap-8 text-neutral-800 relative w-full max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
       >
-        <span className="border-b border-neutral-300 w-full" />
+        <span className="border-b border-neutral-800/25 w-full" />
 
         <ul
           ref={scrollerRef}
@@ -127,7 +133,7 @@ export default function Stack() {
           ))}
         </ul>
 
-        <span className="border-b border-neutral-300 w-full" />
+        <span className="border-b border-neutral-800/25 w-full" />
       </motion.div>
     </div>
   );

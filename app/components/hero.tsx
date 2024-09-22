@@ -10,9 +10,9 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: 0.5,
-          ease: [0.42, 0, 0.58, 1],
+          ease: "easeInOut",
         }}
-        className="flex flex-row gap-2 items-center tracking-wide font-light shadow-sm bg-white border-neutral-300 border text-neutral-800 px-2.5 text-base text-center rounded-full"
+        className="flex flex-row gap-2 items-center tracking-wide font-light bg-white border border-neutral-800/25 text-neutral-800 px-2.5 text-base text-center rounded-full"
       >
         <span className="flex w-2.5 h-2.5 bg-teal-500 rounded-full" />
         <span>Available for work</span>
@@ -23,9 +23,9 @@ export default function Hero() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            delay: 0.25,
+            delay: 0.1,
             duration: 0.5,
-            ease: [0.42, 0, 0.58, 1],
+            ease: "easeInOut",
           }}
           className="text-7xl leading-none max-w-2xl sm:text-8xl text-neutral-800 text-center font-medium flex flex-col items-center"
         >
@@ -37,12 +37,12 @@ export default function Hero() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            delay: 0.5,
+            delay: 0.2,
             duration: 0.5,
-            ease: [0.42, 0, 0.58, 1],
+            ease: "easeInOut",
           }}
         >
-          <p className="max-w-xl w-full text-center font-light tracking-wide text-xl sm:text-2xl text-neutral-500">
+          <p className="max-w-xl w-full text-center font-light tracking-wide text-xl sm:text-2xl text-neutral-800">
             Experienced Front End Developer with a focus on{" "}
             <span className="relative inline-block stroke-current">
               React
@@ -64,8 +64,8 @@ export default function Hero() {
                     strokeDashoffset: 0,
                   }}
                   transition={{
-                    delay: 1,
-                    duration: 1,
+                    delay: 0.8,
+                    duration: 0.8,
                   }}
                 />
               </svg>
@@ -91,8 +91,8 @@ export default function Hero() {
                     strokeDashoffset: 0,
                   }}
                   transition={{
-                    delay: 1,
-                    duration: 1,
+                    delay: 0.8,
+                    duration: 0.8,
                   }}
                 />
               </svg>
@@ -100,7 +100,7 @@ export default function Hero() {
             , who thrives on building engaging and effective web applications.
           </p>
 
-          <button className="py-2.5 hover:bg-neutral-700 tracking-wide font-medium text-base duration-200 w-32 text-white bg-neutral-800 rounded-full">
+          <button className="py-2 hover:bg-neutral-800/90 tracking-wide font-normal text-lg duration-200 w-32 text-white bg-neutral-800 rounded-full">
             Let&apos;s Talk
           </button>
         </motion.div>
