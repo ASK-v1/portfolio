@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import FramerButton from "./framer-button";
 
 export default function Hero() {
   return (
@@ -33,7 +35,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.div
-          className="flex flex-col gap-8 items-center"
+          className="flex flex-col items-center"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -100,9 +102,13 @@ export default function Hero() {
             , who thrives on building engaging and effective web applications.
           </p>
 
-          <button className="py-2 hover:bg-neutral-800/90 tracking-wide font-normal text-lg duration-200 w-32 text-white bg-neutral-800 rounded-full">
-            Let&apos;s Talk
-          </button>
+          <Link href="mailto:a.kntr93@gmail.com">
+            <FramerButton className="group p-8 -mb-8">
+              <p className="py-3 group-hover:bg-teal-500 tracking-wide font-normal w-28 text-white bg-neutral-800 rounded-full">
+                Let&apos;s Talk
+              </p>
+            </FramerButton>
+          </Link>
         </motion.div>
       </div>
     </div>
