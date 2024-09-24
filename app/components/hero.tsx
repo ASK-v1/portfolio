@@ -3,13 +3,24 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import FramerButton from "./framer-button";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimating(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center gap-8">
       <motion.div
         initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={isAnimating ? { y: 0, opacity: 1 } : {}}
         transition={{
           duration: 0.5,
           ease: "easeInOut",
@@ -23,7 +34,7 @@ export default function Hero() {
       <div className="flex flex-col gap-4 items-center">
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={isAnimating ? { y: 0, opacity: 1 } : {}}
           transition={{
             delay: 0.1,
             duration: 0.5,
@@ -37,7 +48,7 @@ export default function Hero() {
         <motion.div
           className="flex flex-col items-center"
           initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={isAnimating ? { y: 0, opacity: 1 } : {}}
           transition={{
             delay: 0.2,
             duration: 0.5,
@@ -57,7 +68,7 @@ export default function Hero() {
               >
                 <motion.path
                   d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
-                  stroke-width="3.2"
+                  strokeWidth="3.2"
                   initial={{
                     strokeDasharray: 84.20591735839844,
                     strokeDashoffset: 84.20591735839844,
@@ -66,8 +77,8 @@ export default function Hero() {
                     strokeDashoffset: 0,
                   }}
                   transition={{
-                    delay: 0.8,
-                    duration: 0.8,
+                    delay: 1,
+                    duration: 2,
                   }}
                 />
               </svg>
@@ -84,7 +95,7 @@ export default function Hero() {
               >
                 <motion.path
                   d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
-                  stroke-width="2"
+                  strokeWidth="2"
                   initial={{
                     strokeDasharray: 84.20591735839844,
                     strokeDashoffset: 84.20591735839844,
@@ -93,8 +104,8 @@ export default function Hero() {
                     strokeDashoffset: 0,
                   }}
                   transition={{
-                    delay: 0.8,
-                    duration: 0.8,
+                    delay: 1,
+                    duration: 2,
                   }}
                 />
               </svg>
@@ -102,7 +113,7 @@ export default function Hero() {
             , who thrives on building engaging and effective web applications.
           </p>
 
-          <Link href="mailto:a.kntr93@gmail.com">
+          <Link target="_blank" href="mailto:a.kntr93@gmail.com">
             <FramerButton className="group p-8 -mb-8">
               <p className="py-3 group-hover:bg-teal-500 tracking-wide font-normal w-28 text-white bg-neutral-800 rounded-full">
                 Let&apos;s Talk
