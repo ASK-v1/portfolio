@@ -25,9 +25,21 @@ export default function Hero() {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="flex flex-row gap-2 items-center tracking-wide font-light bg-white border border-neutral-800/25 text-neutral-800 px-2.5 text-base text-center rounded-full"
+        className="flex flex-row gap-2 items-center tracking-wide font-light bg-white border border-neutral-800/25 text-neutral-800 px-2.5 text-lg text-center rounded-full"
       >
-        <span className="flex w-2.5 h-2.5 bg-teal-500 rounded-full" />
+        <motion.div
+          initial={{ scale: 1, opacity: 1 }}
+          animate={{
+            scale: [1, 0.75, 1],
+            opacity: [1, 0.5, 1],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="w-2.5 h-2.5 bg-teal-500 rounded-full shadow-[0_0_5px_5px_rgba(20,184,166,0.25)]"
+        />
         <span>Available for work</span>
       </motion.div>
 
@@ -115,7 +127,7 @@ export default function Hero() {
 
           <Link target="_blank" href="mailto:a.kntr93@gmail.com">
             <FramerButton className="group p-8 -mb-8">
-              <p className="py-3 group-hover:bg-teal-500 tracking-wide font-normal w-28 text-white bg-neutral-800 rounded-full">
+              <p className="py-2.5 group-hover:bg-teal-500 text-lg tracking-wide font-normal w-28 text-white bg-neutral-800 rounded-full">
                 Let&apos;s Talk
               </p>
             </FramerButton>
