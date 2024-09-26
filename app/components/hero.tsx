@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import FramerButton from "./framer-button";
 import { useEffect, useState } from "react";
+import Feature from "./feature";
 
 export default function Hero() {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -134,6 +135,8 @@ export default function Hero() {
           </Link>
         </motion.div>
       </div>
+
+      <Feature />
     </div>
   );
 }
