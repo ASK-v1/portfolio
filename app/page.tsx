@@ -3,6 +3,7 @@ import Stack from "./components/stack";
 import Work from "./components/work";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import About from "./components/about";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Stack />
         <Work />
+        <About />
       </main>
       <Footer />
     </div>
