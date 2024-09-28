@@ -78,7 +78,7 @@ export default function Stack() {
       });
 
       containerRef.current.style.setProperty("--animation-direction", "normal");
-      containerRef.current.style.setProperty("--animation-duration", "100s");
+      containerRef.current.style.setProperty("--animation-duration", "50s");
     }
   }
 
@@ -88,8 +88,9 @@ export default function Stack() {
 
   return (
     <div
+      id="stack"
       ref={ref}
-      className="flex gap-8 items-start justify-center w-full max-w-7xl flex-col"
+      className="flex gap-8 items-start justify-center w-full max-w-5xl flex-col"
     >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
@@ -99,7 +100,7 @@ export default function Stack() {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="text-neutral-800 font-medium text-3xl sm:text-4xl"
+        className="text-neutral-800 font-medium text-4xl sm:text-5xl"
       >
         Tech Stack
       </motion.h2>
@@ -113,27 +114,24 @@ export default function Stack() {
           ease: "easeInOut",
         }}
         ref={containerRef}
-        className="scroller flex flex-col gap-8 text-neutral-800 relative w-full max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+        className="scroller relative w-full max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
       >
-        <span className="border-b border-neutral-800/25 w-full" />
-
         <ul
           ref={scrollerRef}
-          className="flex min-w-full gap-20 w-max animate-scroll"
+          className="flex min-w-full gap-16 w-max animate-scroll"
         >
           {tech.map((item) => (
             <li className="max-w-full" key={item.name}>
               <Image
-                width={32}
-                height={32}
+                width={64}
+                height={64}
                 src={`/icons/${item.src}`}
+                className="bg-white border border-neutral-800/25 rounded-lg p-4"
                 alt={item.name}
               />
             </li>
           ))}
         </ul>
-
-        <span className="border-b border-neutral-800/25 w-full" />
       </motion.div>
     </div>
   );
